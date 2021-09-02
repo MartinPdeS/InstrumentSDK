@@ -1,1 +1,1 @@
-from .thorlabs_apt import *
+from .core import *
