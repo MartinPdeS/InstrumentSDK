@@ -1,29 +1,21 @@
-import thorlabs_apt as apt
-import numpy as np
+#!/usr/bin/env python3.9
+# -*- coding: utf-8 -*-
 
-print(apt.list_available_devices())
+import pandas as pd
 
-
-
-def GoFrom(angle0, angle1, Num):
-    AngleList = np.linspace(angle0, angle1, Num)
-    for angle in AngleList:
-        Goniometer.move_to(angle)
+# https://thorlabs-apt-device.readthedocs.io/en/latest/
+# Module multi plate-forme
+import thorlabs_apt_device as apt
 
 
-class Goniometer(object):
-    name = HDR50
+class Goniomètre:
 
-    def __init__(self, id=40219394):
-	self.id        = id
-	self.motor     = apt.Motor(self.id)
-	self._Position = None
+    def __init__(self, id: int):
+        self. id = id
+        self.motor = None # Obtenier la classe appropriée d'apt
 
-    @property
-    def Position(self):
-	return self._Position
-
-    @Position.setter
-    def Position(self, val)
-        self.motor.move_to(val)
-	
+    def angle(self, a=None):
+        if a is None:
+            return self.motor.position #  TODO: changer pour le bon attribut
+        else:
+            self.motor.go(a) # TODO: utiliser la bonne méthode
