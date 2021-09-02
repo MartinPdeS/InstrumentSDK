@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+setup.py
+InstrumentSDK/__init__.py
+InstrumentSDK.egg-info/PKG-INFO
+InstrumentSDK.egg-info/SOURCES.txt
+InstrumentSDK.egg-info/dependency_links.txt
+InstrumentSDK.egg-info/requires.txt
+InstrumentSDK.egg-info/top_level.txt
