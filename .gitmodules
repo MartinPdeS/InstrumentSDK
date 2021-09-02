@@ -1,0 +1,12 @@
+[submodule "thorlabs-apt-device"]
+	path = thorlabs-apt-device
+	url = https://gitlab.com/ptapping/thorlabs-apt-device.git
+[submodule "thorlabs_apt"]
+	path = thorlabs_apt
+	url = https://github.com/qpit/thorlabs_apt.git
+[submodule "thorpy"]
+	path = thorpy
+	url = https://github.com/UniNE-CHYN/thorpy.git
+[submodule "elliptecstage"]
+	path = elliptecstage
+	url = https://github.com/augvislab/elliptecstage.git
