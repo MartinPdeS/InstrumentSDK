@@ -10,3 +10,6 @@
 [submodule "elliptecstage"]
 	path = elliptecstage
 	url = https://github.com/augvislab/elliptecstage.git
+[submodule "optometrics_minichrom"]
+	path = optometrics_minichrom
+	url = git@github.com:ejetzer/optometrics_minichrom.git
