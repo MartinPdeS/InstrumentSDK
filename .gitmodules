@@ -1,0 +1,15 @@
+[submodule "thorlabs-apt-device"]
+	path = modules/thorlabs-apt-device
+	url = https://gitlab.com/ptapping/thorlabs-apt-device.git
+[submodule "thorlabs_apt"]
+	path = modules/thorlabs_apt
+	url = https://github.com/qpit/thorlabs_apt.git
+[submodule "thorpy"]
+	path = modules/thorpy
+	url = https://github.com/UniNE-CHYN/thorpy.git
+[submodule "elliptecstage"]
+	path = modules/elliptecstage
+	url = https://github.com/augvislab/elliptecstage.git
+[submodule "optometrics_minichrom"]
+	path = modules/optometrics_minichrom
+	url = git@github.com:ejetzer/optometrics_minichrom.git
