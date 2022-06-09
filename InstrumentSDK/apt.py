@@ -93,22 +93,41 @@ class BSC201_HDR50(BSC201):
 
             
 if __name__ == '__main__':
+    print('Initialisation...', end='\r')
     stage = BSC201_HDR50()
-    try:
-        stage.identify() # La lumière sur le contrôleur externe devrait clignoter.
+    time.sleep(10)
+    print('Initialisation.  ')
     
+    try:
+        print('Identification...', end='\r')
+        stage.identify() # La lumière sur le contrôleur externe devrait clignoter.
+        print('Identifié.       ')
+    
+        print('Déactivation...', end='\r')
         stage.set_enabled(False)
         time.sleep(10)
+        print('Déactivé.      ', end='\r')
+        print('Réactivation...', end='\r')
         stage.set_enabled(True)
-    
+        print('Réactivé.      ')
+        
+        print('Déplacement rapide...', end='\r')
         stage.move_velocity(direction='forward')
         time.sleep(10)
         stage.stop()
-    
+        print('Déplacement rapide.  ')
+        
+        print('Dans l\'autre sens...', end='\r')
         stage.move_velocity(direction='reverse')
         time.sleep(5)
         stage.stop()
+        print('Dans l\'autre sens.  ')
         
+        print('Retour...', end='\r')
         stage.home()
+        time.sleep(10)
+        print('Retour.  ')
     finally:   
         stage.close()
+    
+    print('Fin.')

@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# Bibliothèques standards
+import time
+
 # Bibliothèques publiques
 import serial
 
@@ -24,13 +27,18 @@ def lister_appareils(com, début: int = 0, fin: int = 15) -> list:
 
 
 if __name__ == '__main__':
+    print('Connection...', end='\r')
     with serial.Serial(port_elliptec().device, timeout=5) as com:
+        print('Connecté.    ')
+        
+        print('Boucle sur les appareils:')
         for i in lister_appareils(com, 1, 3):
             # Exemple tiré de https://github.com/augvislab/elliptecstage
             print(f'# Étage {i}')
 
             try:
                 stage = ElloStage(com, i)
+                time.sleep(10) # Il faut attendre que les moteurs soient bien initialisés
                 
                 print('1. Positionnement: ', end='')
                 stage.move_home()
